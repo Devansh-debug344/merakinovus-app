@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
-import logo from "../assets/fav-icon.png";
+import logo from "../assets/icon.png";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("#home");
@@ -33,7 +33,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="cursor-pointer"
           >
-            <img src={logo} alt="Logo" className="lg:h-20 rounded-full object-cover w-auto h-15" />
+            <img src={logo} alt="Logo" className="lg:h-15 w-auto h-15" />
           </motion.div>
         </motion.div>
         {/* Mobile Menu Button */}

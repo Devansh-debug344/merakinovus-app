@@ -11,37 +11,37 @@ const testimonials = [
     id: 1,
     name: "Robin Ayala Doe", 
     image: "https://randomuser.me/api/portraits/men/77.jpg",
-    text: "Therapy gave me the space to finally talk about things I had buried for years. I feel lighter, more grounded, and finally hopeful about the future.",
+    text: "The 3D printing service delivered exactly what I needed — high quality and precise models for my prototype. It really sped up our product development cycle.",
   },
   {
     id: 2,
     name: "Jane Martinez",
     image: "https://randomuser.me/api/portraits/women/90.jpg", 
-    text: "I used to feel overwhelmed and anxious every day. Working with my therapist helped me understand my triggers and build real tools to cope.",
+    text: "I was amazed by the attention to detail and quick turnaround. The team helped me customize my design perfectly and the final print exceeded expectations!",
   },
   {
     id: 3,
     name: "Rowhan Smith",
     image: "https://randomuser.me/api/portraits/men/90.jpg",
-    text: "It's not an overnight fix, but every session helped me get a little closer to peace. For the first time, I feel like I'm becoming who I was meant to be.",
+    text: "Their expertise in materials and printing technology helped me choose the right solution for my project. I highly recommend their services for any 3D printing needs.",
   },
   {
     id: 4,
     name: "Sarah Johnson",
     image: "https://randomuser.me/api/portraits/women/45.jpg",
-    text: "I was skeptical about therapy, but now I recommend it to everyone. It's like having a guide through the fog — someone who helps you see clearly again.",
+    text: "From initial consultation to delivery, the process was smooth and professional. The quality and durability of the prints were outstanding.",
   },
   {
     id: 5,
     name: "Michael Chen",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "I’ve struggled with depression for years. Getting support wasn’t easy, but it changed everything. I finally feel like I’m not alone in this.",
+    text: "I needed custom parts fast and they delivered on time with excellent quality. Their 3D printing service is a game changer for my manufacturing workflow.",
   },
   {
     id: 6,
     name: "Emma Wilson",
     image: "https://randomuser.me/api/portraits/women/28.jpg",
-    text: "Opening up was hard, but I was met with empathy and understanding. Now, I’m building a life based on self-worth, not shame.",
+    text: "The team’s support and guidance throughout the printing process made it easy for me to get exactly what I envisioned. Highly skilled and reliable service.",
   },
 ];
 
@@ -56,13 +56,13 @@ const TestimonialsSection = () => {
           variants={textVariant(0.2)}
           className="text-3xl md:text-4xl font-bold mb-4"
         >
-          Stories of Healing & Hope
+          What Our Clients Say About Our 3D Printing Services
         </motion.h2>
         <motion.p 
           variants={fadeIn('up', 0.4)}
           className="text-gray-600"
         >
-          Real experiences from those who&apos;ve found strength through therapy
+          Real feedback from customers who trust us with their 3D printing needs
         </motion.p>
       </motion.div>
 

@@ -4,22 +4,25 @@ import { fadeIn, textVariant } from "../utils/motion";
 const FeaturesSection = () => {
   const features = [
     {
-      icon: "🧭",
-      title: "Understand Your Needs",
+      icon: "🖨️",
+      label: "3D Printer",
+      title: "High-Quality 3D Printing",
       description:
-        "We begin by listening—really listening—to your experiences, challenges, and goals for therapy.",
+        "Using state-of-the-art 3D printers, we deliver precise and detailed prints tailored to your specifications.",
     },
     {
-      icon: "🛠️",
-      title: "Tailored Support Plans",
+      icon: "⚙️",
+      label: "Custom Design Services",
+      title: "Custom CAD Modeling",
       description:
-        "We create a personalized approach that fits your emotional needs, lifestyle, and healing pace.",
+        "Our design experts help bring your ideas to life with custom CAD models ready for printing or prototyping.",
     },
     {
-      icon: "🌟",
-      title: "Guided Healing Journey",
+      icon: "🚚",
+      label: "Fast Delivery",
+      title: "Quick Turnaround & Shipping",
       description:
-        "From day one, you're not alone—our team walks with you through every step of your growth and recovery.",
+        "From printing to your doorstep, we ensure fast and reliable delivery to keep your projects on schedule.",
     },
   ];
 
@@ -28,18 +31,18 @@ const FeaturesSection = () => {
       variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
-      className="max-w-7xl mx-auto px-4 py-16"
+      viewport={{ once: true }}
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
     >
       <motion.div variants={fadeIn("up", 0.3)} className="text-center mb-12">
         <motion.h2
           variants={textVariant(0.2)}
           className="text-3xl font-bold mb-4"
         >
-          How can we support your mental well-being?
+          Why Choose Our 3D Printing Services?
         </motion.h2>
-        <motion.p variants={fadeIn("up", 0.4)} className="text-gray-600">
-          Whether you&apos;re facing anxiety, burnout, or simply need someone to
-          talk to—we&apos;re here to help.
+        <motion.p variants={fadeIn("up", 0.4)} className="text-gray-600 max-w-2xl mx-auto">
+          We combine cutting-edge technology with expert craftsmanship to deliver custom 3D printing solutions that meet your unique needs.
         </motion.p>
       </motion.div>
 
@@ -51,7 +54,7 @@ const FeaturesSection = () => {
           <motion.div
             key={index}
             variants={fadeIn("up", 0.3 * (index + 1))}
-            className="flex flex-col items-center p-6"
+            className="flex flex-col items-center p-6 text-center"
           >
             <motion.div
               variants={fadeIn("down", 0.4 * (index + 1))}
@@ -61,12 +64,9 @@ const FeaturesSection = () => {
                   index === 0 ? "#E3F2FD" : index === 1 ? "#E8F5E9" : "#FFF3E0",
               }}
             >
-              <motion.div
-                variants={fadeIn("up", 0.5 * (index + 1))}
-                className="text-3xl"
-              >
+              <span role="img" aria-label={feature.label} className="text-3xl">
                 {feature.icon}
-              </motion.div>
+              </span>
             </motion.div>
             <motion.h3
               variants={textVariant(0.3)}
@@ -76,7 +76,7 @@ const FeaturesSection = () => {
             </motion.h3>
             <motion.p
               variants={fadeIn("up", 0.6 * (index + 1))}
-              className="text-gray-500 text-center"
+              className="text-gray-500"
             >
               {feature.description}
             </motion.p>
@@ -89,10 +89,10 @@ const FeaturesSection = () => {
           variants={fadeIn("up", 0.8)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-purple-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors relative"
+          className="relative bg-purple-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors"
         >
-          Start Your Journey
-          <div className="absolute -z-10 w-full h-full rounded-full bg-purple-600/30 blur-xl top-0 left-0"></div>
+          Get Your Custom Quote
+          <div className="absolute inset-0 -z-10 rounded-full bg-purple-600/40 blur-2xl opacity-50"></div>
         </motion.button>
       </motion.div>
     </motion.section>

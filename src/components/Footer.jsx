@@ -6,30 +6,31 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import logo from "../assets/fav-icon.png";
+import logo from "../assets/icon.png";
+
 const Footer = () => {
   const footerLinks = {
     about: [
       { name: "Our Mission", href: "#" },
       { name: "Team", href: "#" },
       { name: "Blog", href: "#" },
-      { name: "Testimonials", href: "#" },
+      { name: "Customer Reviews", href: "#" },
       { name: "Contact Us", href: "#" },
     ],
     services: [
-      { name: "Therapy Sessions", href: "#" },
-      { name: "Workshops & Events", href: "#" },
-      { name: "Support Groups", href: "#" },
-      { name: "Resources", href: "#" },
+      { name: "3D Printing Services", href: "#" },
+      { name: "Prototyping & Modeling", href: "#" },
+      { name: "Custom Design Solutions", href: "#" },
+      { name: "Material Consultation", href: "#" },
     ],
     support: [
       { name: "FAQs", href: "#" },
       { name: "Privacy Policy", href: "#" },
       { name: "Terms of Service", href: "#" },
-      { name: "Accessibility", href: "#" },
+      { name: "Technical Support", href: "#" },
     ],
     connect: [
-      { name: "Help Hotline", href: "#" },
+      { name: "Customer Support", href: "#" },
       { name: "Live Chat", href: "#" },
       { name: "Newsletter Signup", href: "#" },
     ],
@@ -53,8 +54,6 @@ const Footer = () => {
               variants={fadeIn("down", 0.5)}
               className="flex items-center gap-1 mb-6"
             >
-              {/* <div className="w-4 h-4 bg-green-500 rounded-full opacity-75"></div>
-              <div className="w-4 h-4 bg-teal-400 rounded-full -ml-2"></div> */}
               <motion.div
                 variants={fadeIn("right", 0.3)}
                 className="flex items-center gap-1 cursor-pointer"
@@ -71,14 +70,13 @@ const Footer = () => {
                   />
                 </motion.div>
               </motion.div>
-              <span className="text-xl font-medium ml-1">Varutra</span>
+              <span className="text-xl font-medium ml-1">Merakinovus</span>
             </motion.div>
             <motion.p
               variants={fadeIn("up", 0.6)}
               className="text-gray-600 mb-6"
             >
-              Supporting your journey toward mental wellness with compassion,
-              understanding, and expert care.
+              Delivering precision 3D printing, prototyping, and custom solutions with cutting-edge technology and expert craftsmanship.
             </motion.p>
             <motion.div variants={fadeIn("up", 0.7)} className="flex gap-4">
               <motion.a
@@ -169,7 +167,7 @@ const Footer = () => {
               variants={fadeIn("right", 1.0)}
               className="text-gray-600 text-sm"
             >
-              © {new Date().getFullYear()} varutra@gmail.com
+              © {new Date().getFullYear()} merakinovus@gmail.com
             </motion.p>
             <motion.p
               variants={fadeIn("left", 1.0)}

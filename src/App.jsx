@@ -4,9 +4,9 @@ import Hero from './components/Hero'
 // import CompanyLogo from './components/CompanyLogo'
 import PurposeSection from './components/PurposeSection'
 import FeaturesSection from './components/FeaturesSection'
-import ScheduleSection from './components/ScheduleSection'
+// import ScheduleSection from './components/ScheduleSection'
 // import MonitorSection from './components/MonitorSection'
-import PricingSection from './components/PricingSection'
+// import PricingSection from './components/PricingSection'
 import ServicesSection from './components/ServicesSection'
 import TestimonialsSection from './components/TestimonialsSection'
 // import NewsletterSection from './components/NewsletterSection'
@@ -22,9 +22,9 @@ function App() {
         {/* <CompanyLogo /> */}
         <PurposeSection />
         <FeaturesSection />
-        <ScheduleSection />
+        {/* <ScheduleSection /> */}
         {/* <MonitorSection /> */}
-        <PricingSection />
+        {/* <PricingSection /> */}
         <ServicesSection />
         <TestimonialsSection />
         {/* <NewsletterSection /> */}

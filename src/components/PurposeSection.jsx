@@ -4,16 +4,28 @@ import { fadeIn, textVariant } from "../utils/motion";
 const PurposeSection = () => {
   const features = [
     {
-      icon: "🧘‍♀️", // You can use a therapy-related emoji or replace with an SVG/icon
-      title: "Support That Matters",
+      icon: "🖨️", // 3D Printer
+      title: "Cutting-Edge 3D Printing",
       description:
-        "Our therapists provide compassionate, evidence-based care tailored to your unique emotional journey."
+        "From concept to creation, we offer high-precision 3D printing services for prototypes, parts, and end-use products."
     },
     {
-      icon: "🧠", // Use a brain/mind symbol
-      title: "In Tune With You",
+      icon: "⚙️", // Mechanical gear
+      title: "Rapid Prototyping",
       description:
-        "We adapt our methods to your pace and preferences, creating a safe, collaborative space for healing."
+        "Speed up your development cycle with quick turnaround times, helping you test and refine ideas faster."
+    },
+    {
+      icon: "🧩", // Puzzle/Assembly
+      title: "Custom Manufacturing",
+      description:
+        "Tailored production solutions to meet your unique specifications — whether it’s one piece or one thousand."
+    },
+    {
+      icon: "📦", // Packaging
+      title: "End-to-End Solutions",
+      description:
+        "From design assistance to final delivery, we handle every stage with precision and care."
     }
   ];
 
@@ -31,13 +43,13 @@ const PurposeSection = () => {
               variants={fadeIn('up', 0.4)}
               className="text-sm text-purple-600 font-medium mb-2"
             >
-              HEAL & GROW
+              INNOVATE & BUILD
             </motion.div>
             <motion.h2 
               variants={textVariant(0.5)}
               className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-900"
             >
-              Purpose is to support your mental wellness
+              Empowering Ideas Through 3D Printing & Custom Fabrication
             </motion.h2>
           </motion.div>
 

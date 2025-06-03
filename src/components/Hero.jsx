@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
 import MyAnimation from "./lib/animation";
+import Print from "./lib/print3d";
 
 const Hero = () => {
   return (
@@ -23,9 +24,9 @@ const Hero = () => {
           whileInView="show"
           className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          We Provide Mental Therapy for{' '}
+          We Provide Services like{' '}
           <span className="text-green-700 relative inline-block">
-            Students
+            3D Printing
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-200/60"></span>
           </span>{' '}
           <span className="inline-block ml-2 animate-pulse"></span>
@@ -37,7 +38,7 @@ const Hero = () => {
           whileInView="show"
           className="text-green-800 text-lg md:text-xl max-w-xl"
         >
-          Mental health, reimagined for   students
+         Reverse Engineering
         </motion.p>
 
         <motion.div 
@@ -71,7 +72,7 @@ const Hero = () => {
             alt="Team meeting"
             className="rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300"
           /> */}
-          <MyAnimation/>
+          <Print/>
         </div>
       </motion.div>
     </section>
