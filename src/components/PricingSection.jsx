@@ -1,124 +1,129 @@
-import { useState } from 'react'
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const PricingSection = () => {
-  const [productCount, setProductCount] = useState(1)
-  
-  // Calculate prices based on product count
-  const starterPrice = Math.round(4000 * (productCount / 50))
-  const businessPrice = Math.round(7500 * (productCount / 50))
+  const [sessionCount, setSessionCount] = useState(1);
+
+  // Calculate prices based on session count
+  const personalCarePrice = Math.round(1500 * (sessionCount / 10)); // base ₹1500 for 10 sessions
+  const guidedSupportPrice = Math.round(3000 * (sessionCount / 10)); // base ₹3000 for 10 sessions
 
   return (
-    <motion.section 
-      variants={fadeIn('up', 0.2)}
+    <motion.section
+      variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
-      className="py-20 px-4"
+      className="py-20 px-4 bg-gray-50"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.h2 
+        <motion.h2
           variants={textVariant(0.3)}
-          className="text-3xl md:text-4xl font-bold text-center mb-16"
+          className="text-3xl md:text-4xl text-green-800 font-bold text-center mb-16 text-navy-900"
         >
-          Pricing
+          Therapy Pricing
         </motion.h2>
-        
-        <motion.div 
-          variants={fadeIn('up', 0.4)}
+
+        <motion.div
+          variants={fadeIn("up", 0.4)}
           className="grid md:grid-cols-2 gap-8 mb-12"
         >
-          {/* Starter Plan */}
-          <motion.div 
-            variants={fadeIn('right', 0.5)}
+          {/* Personal Care Plan */}
+          <motion.div
+            variants={fadeIn("right", 0.5)}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <motion.h3 
-              variants={fadeIn('up', 0.6)}
-              className="text-xl text-gray-600 mb-4"
+            <motion.h3
+              variants={fadeIn("up", 0.6)}
+              className="text-xl text-green-700 mb-4"
             >
-              Starter
+              Personal Care
             </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.7)}
-              className="text-3xl font-bold mb-6"
+            <motion.p
+              variants={fadeIn("up", 0.7)}
+              className="text-3xl font-bold mb-4"
             >
-              ${starterPrice}/mo
+              ₹{personalCarePrice}/mo
             </motion.p>
+            <p className="text-gray-600">
+              Great for individuals starting their wellness journey. Includes
+              access to certified therapists and self-guided tools.
+            </p>
           </motion.div>
-          
-          {/* Business Plan */}
-          <motion.div 
-            variants={fadeIn('left', 0.5)}
+
+          {/* Guided Support Plan */}
+          <motion.div
+            variants={fadeIn("left", 0.5)}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
-            <motion.h3 
-              variants={fadeIn('up', 0.6)}
-              className="text-xl text-gray-600 mb-4"
+            <motion.h3
+              variants={fadeIn("up", 0.6)}
+              className="text-xl text-green-700 mb-4"
             >
-              Business
+              Guided Support
             </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.7)}
-              className="text-3xl font-bold mb-6"
+            <motion.p
+              variants={fadeIn("up", 0.7)}
+              className="text-3xl font-bold mb-4"
             >
-              ${businessPrice}/mo
+              ₹{guidedSupportPrice}/mo
             </motion.p>
+            <p className="text-gray-600">
+              Ideal for deeper care. Includes more sessions, 1-on-1 therapy,
+              emotional wellness resources, and priority support.
+            </p>
           </motion.div>
         </motion.div>
 
-        <motion.div 
-          variants={fadeIn('up', 0.8)}
-          className="max-w-xl mx-auto"
-        >
-          <motion.p 
-            variants={fadeIn('up', 0.9)}
+        <motion.div variants={fadeIn("up", 0.8)} className="max-w-xl mx-auto">
+          <motion.p
+            variants={fadeIn("up", 0.9)}
             className="text-center text-gray-600 mb-4"
           >
-            {productCount} products
+            {sessionCount} sessions/month
           </motion.p>
-          
-          <motion.div 
-            variants={fadeIn('up', 1.0)}
-            className="relative px-4"
-          >
+
+          <motion.div variants={fadeIn("up", 1.0)} className="relative px-4">
             <div className="flex items-center gap-2">
-              <span className="text-xs sm:text-sm text-gray-600">1</span>
-              <input 
-                type="range" 
-                min="1" 
-                max="50" 
-                value={productCount}
-                onChange={(e) => setProductCount(parseInt(e.target.value))}
-                className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              <span className="text-sm text-gray-600">1</span>
+              <input
+                type="range"
+                min="1"
+                max="10"
+                value={sessionCount}
+                onChange={(e) => setSessionCount(parseInt(e.target.value))}
+                className="flex-1 h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer"
+                style={{
+                  accentColor: "green", // this works in modern browsers (especially Chrome/Edge)
+                }}
               />
-              <span className="text-xs sm:text-sm text-gray-600">50</span>
+              <span className="text-sm text-gray-600">10</span>
             </div>
           </motion.div>
 
-          <motion.div 
-            variants={fadeIn('up', 1.1)}
+          <motion.div
+            variants={fadeIn("up", 1.1)}
             className="text-center mt-12"
           >
-            <motion.p 
-              variants={fadeIn('up', 1.2)}
-              className="text-xl text-gray-600 mb-4"
+            <motion.p
+              variants={fadeIn("up", 1.2)}
+              className="text-xl text-green-700 mb-4"
             >
-              Ready to get started?
+              Ready to begin your healing journey?
             </motion.p>
-            <motion.button 
-              variants={fadeIn('up', 1.3)}
+            <motion.button
+              variants={fadeIn("up", 1.3)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
+              className="bg-green-800 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors cursor-pointer"
             >
-              Get Started
+              Book Your Plan
             </motion.button>
           </motion.div>
         </motion.div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default PricingSection 
+export default PricingSection;

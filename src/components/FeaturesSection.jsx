@@ -1,85 +1,81 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: "🔍", 
-      title: "Find out what you need",
-      description: "We present you a proposal and discuss nitty-gritty like"
+      icon: "🧭",
+      title: "Understand Your Needs",
+      description:
+        "We begin by listening—really listening—to your experiences, challenges, and goals for therapy.",
     },
     {
-      icon: "⚙️",
-      title: "Work out the details", 
-      description: "Communication protocols apart from engagement models"
+      icon: "🛠️",
+      title: "Tailored Support Plans",
+      description:
+        "We create a personalized approach that fits your emotional needs, lifestyle, and healing pace.",
     },
     {
-      icon: "🚀",
-      title: "We get to work fast",
-      description: "Protocols apart from engage models, pricing billing"
-    }
-  ]
+      icon: "🌟",
+      title: "Guided Healing Journey",
+      description:
+        "From day one, you're not alone—our team walks with you through every step of your growth and recovery.",
+    },
+  ];
 
   return (
-    <motion.section 
-      variants={fadeIn('up', 0.2)}
+    <motion.section
+      variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
       className="max-w-7xl mx-auto px-4 py-16"
     >
-      <motion.div 
-        variants={fadeIn('up', 0.3)}
-        className="text-center mb-12"
-      >
-        <motion.h2 
+      <motion.div variants={fadeIn("up", 0.3)} className="text-center mb-12">
+        <motion.h2
           variants={textVariant(0.2)}
           className="text-3xl font-bold mb-4"
         >
-          How can we help your business?
+          How can we support your mental well-being?
         </motion.h2>
-        <motion.p 
-          variants={fadeIn('up', 0.4)}
-          className="text-gray-600"
-        >
-          When you resell besnik, you build trust and increase
+        <motion.p variants={fadeIn("up", 0.4)} className="text-gray-600">
+          Whether you&apos;re facing anxiety, burnout, or simply need someone to
+          talk to—we&apos;re here to help.
         </motion.p>
       </motion.div>
-      
-      <motion.div 
-        variants={fadeIn('up', 0.5)}
+
+      <motion.div
+        variants={fadeIn("up", 0.5)}
         className="grid grid-cols-1 md:grid-cols-3 gap-8"
       >
         {features.map((feature, index) => (
-          <motion.div 
+          <motion.div
             key={index}
-            variants={fadeIn('up', 0.3 * (index + 1))}
+            variants={fadeIn("up", 0.3 * (index + 1))}
             className="flex flex-col items-center p-6"
           >
-            <motion.div 
-              variants={fadeIn('down', 0.4 * (index + 1))}
-              className="w-24 h-24 rounded-full mb-6 flex items-center justify-center" 
-              style={{ 
-                backgroundColor: index === 0 ? '#F1EFFD' : 
-                               index === 1 ? '#FFE7E7' : 
-                               '#FFF3E4'
+            <motion.div
+              variants={fadeIn("down", 0.4 * (index + 1))}
+              className="w-24 h-24 rounded-full mb-6 flex items-center justify-center"
+              style={{
+                backgroundColor:
+                  index === 0 ? "#E3F2FD" : index === 1 ? "#E8F5E9" : "#FFF3E0",
               }}
             >
-              <motion.div 
-                variants={fadeIn('up', 0.5 * (index + 1))}
+              <motion.div
+                variants={fadeIn("up", 0.5 * (index + 1))}
                 className="text-3xl"
               >
                 {feature.icon}
               </motion.div>
             </motion.div>
-            <motion.h3 
+            <motion.h3
               variants={textVariant(0.3)}
               className="text-2xl font-medium mb-3"
             >
               {feature.title}
             </motion.h3>
-            <motion.p 
-              variants={fadeIn('up', 0.6 * (index + 1))}
+            <motion.p
+              variants={fadeIn("up", 0.6 * (index + 1))}
               className="text-gray-500 text-center"
             >
               {feature.description}
@@ -88,22 +84,19 @@ const FeaturesSection = () => {
         ))}
       </motion.div>
 
-      <motion.div 
-        variants={fadeIn('up', 0.7)}
-        className="text-center mt-12"
-      >
-        <motion.button 
-          variants={fadeIn('up', 0.8)}
+      <motion.div variants={fadeIn("up", 0.7)} className="text-center mt-12">
+        <motion.button
+          variants={fadeIn("up", 0.8)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-blue-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors relative"
+          className="bg-purple-600 text-white cursor-pointer px-8 py-3 rounded-full font-medium hover:bg-purple-700 transition-colors relative"
         >
-          Become a Partner
-          <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/30 blur-xl top-0 left-0"></div>
+          Start Your Journey
+          <div className="absolute -z-10 w-full h-full rounded-full bg-purple-600/30 blur-xl top-0 left-0"></div>
         </motion.button>
       </motion.div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default FeaturesSection
+export default FeaturesSection;

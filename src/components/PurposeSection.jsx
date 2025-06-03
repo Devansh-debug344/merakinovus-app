@@ -4,14 +4,16 @@ import { fadeIn, textVariant } from "../utils/motion";
 const PurposeSection = () => {
   const features = [
     {
-      icon: "🟣", // Replace with your actual icon component or image
-      title: "Built for impact",
-      description: "We identify and nurture a truly diverse team of designers, developers and marketers"
+      icon: "🧘‍♀️", // You can use a therapy-related emoji or replace with an SVG/icon
+      title: "Support That Matters",
+      description:
+        "Our therapists provide compassionate, evidence-based care tailored to your unique emotional journey."
     },
     {
-      icon: "🔴", // Replace with your actual icon component or image
-      title: "In sync with you",
-      description: "We work the way you do by adapting to your workflows and rhythm we aim to blend in for a seamless."
+      icon: "🧠", // Use a brain/mind symbol
+      title: "In Tune With You",
+      description:
+        "We adapt our methods to your pace and preferences, creating a safe, collaborative space for healing."
     }
   ];
 
@@ -29,13 +31,13 @@ const PurposeSection = () => {
               variants={fadeIn('up', 0.4)}
               className="text-sm text-purple-600 font-medium mb-2"
             >
-              ACHIEVE MORE
+              HEAL & GROW
             </motion.div>
             <motion.h2 
               variants={textVariant(0.5)}
               className="text-3xl md:w-4/5 md:text-4xl font-bold text-gray-900"
             >
-              Purpose of a convoy is to keep your team
+              Purpose is to support your mental wellness
             </motion.h2>
           </motion.div>
 
@@ -51,7 +53,7 @@ const PurposeSection = () => {
               >
                 <motion.div 
                   variants={fadeIn('right', 0.4 * (index + 1))}
-                  className="w-12 h-12 flex items-center justify-center rounded-lg"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg text-2xl"
                 >
                   {feature.icon}
                 </motion.div>

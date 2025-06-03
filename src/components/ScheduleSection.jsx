@@ -1,6 +1,6 @@
-import scheduleImage from '../assets/stats.webp'
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import MySchedule from './lib/schedule';
 
 const ScheduleSection = () => {
   return (
@@ -11,17 +11,12 @@ const ScheduleSection = () => {
       className="max-w-7xl mx-auto px-4 py-16 md:py-24"
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
-        {/* Left side - Image */}
+        {/* Left side - Image or schedule UI */}
         <motion.div 
           variants={fadeIn('right', 0.3)}
           className="w-full md:w-1/2"
         >
-          <motion.img 
-            variants={fadeIn('up', 0.4)}
-            src={scheduleImage} 
-            alt="Statistics dashboard" 
-            className="w-full h-auto"
-          />
+          <MySchedule/>
         </motion.div>
 
         {/* Right side - Content */}
@@ -31,29 +26,28 @@ const ScheduleSection = () => {
         >
           <motion.span 
             variants={fadeIn('up', 0.4)}
-            className="text-orange-500 font-semibold"
+            className="text-purple-600 font-semibold"
           >
-            SCHEDULE
+            SESSIONS
           </motion.span>
           <motion.h2 
             variants={textVariant(0.5)}
             className="text-3xl md:text-4xl font-bold text-navy-900 mt-4 mb-6"
           >
-            Streamline Your Business <br />
-            With Smart Scheduling Solutions
+            Your Healing, <br /> On Your Schedule
           </motion.h2>
           <motion.p 
             variants={fadeIn('up', 0.6)}
             className="text-gray-600 mb-8"
           >
-            Take control of your time and boost productivity with our intelligent scheduling system. Automate appointments, manage team availability, and deliver exceptional customer experiences through seamless calendar management.
+            Book sessions at your convenience and take the first step toward better mental health. Our flexible scheduling system ensures you never miss a moment to heal, grow, and feel heard.
           </motion.p>
           <motion.a 
             variants={fadeIn('up', 0.7)}
             href="#" 
-            className="text-blue-500 font-semibold flex items-center gap-2 hover:gap-4 transition-all"
+            className="text-purple-600 font-semibold flex items-center gap-2 hover:gap-4 transition-all"
           >
-            Explore scheduling features
+            View available sessions
             <motion.svg 
               variants={fadeIn('left', 0.8)}
               className="w-5 h-5" 
@@ -75,4 +69,4 @@ const ScheduleSection = () => {
   )
 }
 
-export default ScheduleSection
+export default ScheduleSection;
